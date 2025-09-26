@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 2 - Versi Modern AI</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #eef7f4;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 2rem;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    /* Navigasi */
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      background: white;
+      padding: 15px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .nav a {
+      color: #0072ff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: #00c6ff;
+      transition: width 0.3s;
+    }
+
+    .nav a:hover {
+      color: #00c6ff;
+    }
+
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Konten */
+    .content-wrapper {
+      display: flex;
+      gap: 20px;
+      padding: 30px;
+      animation: fadeUp 1.5s ease-in-out;
+    }
+
+    .sidebar, .main {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      padding: 40px 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .sidebar {
+      flex: 1;
+      background: linear-gradient(180deg, #43cea2, #185a9d);
+      color: white;
+    }
+
+    .main {
+      flex: 2;
+      background: linear-gradient(180deg, #11998e, #38ef7d);
+      color: white;
+      font-size: 1.3rem;
+    }
+
+    .sidebar:hover, .main:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+
+    /* Footer */
+    .footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      animation: fadeUp 1.8s ease-in-out;
+      font-size: 0.95rem;
+    }
+
+    .footer span {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #38ef7d;
+      font-style: italic;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    /* Animasi */
+    @keyframes slideDown {
+      from {opacity: 0; transform: translateY(-40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content-wrapper {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">🌐 Header Modern</header>
+
+  <nav class="nav">
+    <a href="#">Beranda</a>
+    <a href="#">Tentang</a>
+    <a href="#">Proyek</a>
+    <a href="#">Kontak</a>
+  </nav>
+
+  <main class="content-wrapper">
+    <aside class="sidebar">📂 Sisi Kiri</aside>
+    <section class="main">🚀 Area Konten Utama</section>
+    <aside class="sidebar">📂 Sisi Kanan</aside>
+  </main>
+
+  <footer class="footer">
+    © 2025 Tata Letak Modern
+    <span>Dibuat oleh Farhan</span>
+  </footer>
+</body>
+</html>
